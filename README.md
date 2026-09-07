@@ -18,7 +18,7 @@ The main application is a Gradio web interface that natively parses raw `.IMG` f
    ``` 
 
 ### 1. Building the Dataset
-To train the model, we need paired grayscale and color images of the Martian surface. `build_synthetic_pairs.py` is a concurrent scraper that queries the NASA JPL Planetary Data System (PDS) for Mastcam and MAHLI instruments. It filters out raw EDRs and blurry images, downloads valid color products, and synthetically generates corresponding grayscale inputs.
+To train the model, we need paired grayscale and color images of the Martian surface. `build_synthetic_pairs.py` is a concurrent scraper that queries the NASA JPL Planetary Data System (PDS) for Mastcam and MAHLI instruments. It filters out raw EDRs and blurry images, downloads valid color products, and synthetically generates corresponding grayscale inputs. This avoids the issue of trying to colorize Hazcam and Navcam photos to teach the AI, which can introduce more human error. 
 
 To generate a dataset of 2,000 image pairs:
 ```bash
