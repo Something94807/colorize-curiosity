@@ -22,7 +22,6 @@ To train the model, we need paired grayscale and color images of the Martian sur
 
 To generate a dataset of 2,000 image pairs:
 ```bash
-cd training_pipeline
 python build_synthetic_pairs.py --count 2000 --out-dir mars_dataset --workers 12
 ```
 *Note: The script automatically generates a few side-by-side preview images in a `preview/` folder to verify data quality.*
