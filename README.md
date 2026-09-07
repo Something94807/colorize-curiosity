@@ -15,11 +15,7 @@ The main application is a Gradio web interface that natively parses raw `.IMG` f
 2. Run the app:
    ```bash
    python app.py
-   ```
-
-## The Training Pipeline
-
-The `/training_pipeline` folder contains the data engineering and training scripts. 
+   ``` 
 
 ### 1. Building the Dataset
 To train the model, we need paired grayscale and color images of the Martian surface. `build_synthetic_pairs.py` is a concurrent scraper that queries the NASA JPL Planetary Data System (PDS) for Mastcam and MAHLI instruments. It filters out raw EDRs and blurry images, downloads valid color products, and synthetically generates corresponding grayscale inputs.
